@@ -2,6 +2,7 @@ import { Button, Flex, Input, Spinner } from "@chakra-ui/react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
+import { BASE_URL } from "../App";
 
 const TodoForm = () => {
   const [newTodo, setNewTodo] = useState("");
@@ -13,7 +14,7 @@ const TodoForm = () => {
     mutationFn: async (e: React.FormEvent) => {
       e.preventDefault();
       try {
-        const res = await fetch("BASE_URL + /todos", {
+        const res = await fetch(BASE_URL + "/todos", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
