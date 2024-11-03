@@ -15,7 +15,7 @@ node_modules/
 Thumbs.db
 
 # Ignore build directories
-dist/
+# dist/
 build/
 
 # Ignore dependency directories
