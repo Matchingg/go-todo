@@ -4,7 +4,8 @@ tmp_dir = "tmp"
 [build]
   bin = "main"
   cmd = "go build -o {{.Output}} {{.Input}}"
-  exclude = ["tmp/*", "client/*"]
+  exclude = ["tmp/**/*", "client", "node_modules"]
+  exclude_dir = ["client", "node_modules"]
+  exclude_regex = ["client/.*"]
 
   include = ["**/*.go"]
-  ignore = ["tmp/*"]
