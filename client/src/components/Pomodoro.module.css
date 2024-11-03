@@ -1,0 +1,76 @@
+.progressBarContainer {
+  position: relative;
+  width: 100%;
+  max-width: 868px;
+  height: 40px;
+  background-color: #c3c3c3;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressBar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #4caf50 calc(var(--progress, 0%) * 1%),
+    #c3c3c3 calc(var(--progress, 0%) * 1%)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  transition: background 0.5s ease;
+  z-index: 1;
+}
+
+.timerDisplay {
+  position: relative;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+  user-select: none;
+}
+
+.toggleButton {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.toggleButton:hover {
+  background-color: #43a047;
+}
+
+.resetButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff6961;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.resetButton:hover {
+  background-color: #ff4c4c;
+}

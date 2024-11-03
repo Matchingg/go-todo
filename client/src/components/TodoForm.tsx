@@ -41,7 +41,7 @@ const TodoForm = () => {
 
   return (
     <form onSubmit={createTodo}>
-      <Flex gap={2}>
+      <Flex gap={2} pt={4}>
         <Input
           type="text"
           value={newTodo}
